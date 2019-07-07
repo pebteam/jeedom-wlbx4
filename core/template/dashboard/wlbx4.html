@@ -1,0 +1,81 @@
+
+<!-- DIV PRINCIPALE : CARACTERISTIQUES DE LA TUILE  -->
+<div id="plugin_container" class="eqLogic-widget eqLogic allowResize" style="width:#width#;height:#height#;border:#border#;border-radius:#border-radius#;background-color: #background-color#;color: #color#; #style#" data-category="" data-eqLogic_id="#id#" data-version="#version#">
+
+	<!-- TITRE DE LA TUILE  -->
+	<center class="widget-name"><a href="#eqLink#" style="font-size : 1.1em;#hideEqLogicName#">#name_display#</a>
+
+	<!-- ICONE RAFRAICHISSEMENT DE LA TUILE (Inactif)  -->
+	<!--    
+	<span class="statusCmd" style="position : absolute;left : 5px; width : 30px;z-index: 1030;"></span>
+	<i class='fa fa-refresh pull-right cursor refresh' style="margin-top: 3px;margin-right: 3px;"></i>
+	-->   
+  
+	<!-- COMMANDE DU PLUGIN A AFFICHER -->
+
+	<!--
+	
+	Les #balises# doivent être considérées comme des variables.
+	
+	- Certaines sont propres au plugin et sont affectées à partir de la procédure toHtml du core au moyen de la fonction "$replace['#balise#'] = valeur".
+	
+	[#LiveboxIP# - #LiveboxHTTP# - #livebox_img# - #won_img# - #woff_img# - #wswitch_img# - #wrefresh_img# - ...]
+	
+	- D'autres semblent générées par jeedom et affectées à partir de la procédure toHtml du core au moyen de la fonction du type "$replace['#' . $cmd->getLogicalId() . '_id#'] = $cmd->getId();".
+	
+	[#wstate_id# - #won_id_display# - #won_id# - #wrefresh_id_display# - ....]
+	
+	-->
+	
+	<!-- PREMIER GROUPE DE COMMANDES (Image Livebox (Ce n'est pas une commande !) + Image statut du wifi) -->
+	<div>
+
+		<!-- Image Livebox  -->
+		<a title="#LiveboxIP#" href="#LiveboxHTTP#" target="_blank"><img src="#livebox_img#" height="80" width="160"/></a>
+			
+		<!-- Image statut du wifi  -->
+		<!--
+		Note :
+		- Le statut est une commande info/binary (wstate)
+		- Un ID est donné à l'image pour pouvoir être modifiée au moyen du script ci-après
+		-->
+		<a class="cmd" data-cmd_id="#wstate_id#" ><img id="Display_wstate" src="" height="60" width="60" style="border: 1px solid #000000; border-radius: 4px; padding: 5px;"/></a>
+  
+	</div> 
+	
+	<!-- DEUXIME GROUPE DE COMMANDES (Image Livebox + Image statut du wifi) -->
+	<div>
+		<!-- Allumer wifi  -->
+		<a class="btn cmd" style="display:#won_id_display#" data-cmd_id="#won_id#" title="Allumer le wifi" onclick="jeedom.cmd.execute({id: #won_id#});"><img src="#won_img#" height="55" width="55"/></a>
+		<!-- Eteindre wifi  -->
+		<a class="btn cmd" style="display:#woff_id_display#" data-cmd_id="#woff_id#" title="Eteindre le wifi" onclick="jeedom.cmd.execute({id: #woff_id#});"><img src="#woff_img#" height="55" width="55"/></a>
+		<!-- Inverser wifi  -->	
+		<a class="btn cmd" style="display:#wswitch_id_display#" data-cmd_id="#wswitch_id#" title="Inverser l'état du wifi" onclick="jeedom.cmd.execute({id: #wswitch_id#});"><img src="#wswitch_img#" height="55" width="55"/></a>
+		<!-- Rafraichir wifi  -->	
+		<a class="btn cmd" style="display:#wrefresh_id_display#" data-cmd_id="#wrefresh_id#" title="Rafraichir" onclick="jeedom.cmd.execute({id: #wrefresh_id#});"><img src="#wrefresh_img#" height="30" width="30"/></a>
+	</div>   
+   
+   <!-- SCRIPT DU WIDGET -->
+	<script>
+	
+	//Fonction qui se déclare à chaque modification du résultat de la commande wstate
+	jeedom.cmd.update[#wstate_id#] = function(_options){
+		if (_options.display_value == '1' || _options.display_value == 1 || _options.display_value == 'on') {
+			document.getElementById("Display_wstate").src = "plugins/wlbx4/img/w_on.png";	  
+        }else{
+			document.getElementById("Display_wstate").src = "plugins/wlbx4/img/w_off.png";
+		}
+    }    
+	//Affectation de la fonction qui vient d'être créée
+	jeedom.cmd.update[#wstate_id#]({display_value:'#state#'});
+
+	//Au premier affichage du plugin : afficher l'icone en fonction de l'état du wifi
+	if(#wstate# == '1' || #wstate# == 1){
+		document.getElementById("Display_wstate").src = "plugins/wlbx4/img/w_on.png";
+	}else{
+		document.getElementById("Display_wstate").src = "plugins/wlbx4/img/w_off.png";
+	};
+		
+	</script>
+
+</div>

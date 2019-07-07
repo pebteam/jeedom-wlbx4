@@ -46,6 +46,7 @@ Les paramètres suivants peuvent être modifiés par l’utilisateur :
 
 UTILISATION
 ==========
+
 Utilisation de base
 -------------------
 Une fois l’équipement créé et configuré, celui-ci est directement accessible (sous réserve que l’option visible ait été choisie !) sur le dashboard choisi comme parent.
@@ -122,7 +123,8 @@ Puis sauvegardez.
 En dessous du nom de la commande virtuelle (Inverser dans  notre exemple), sélectionnez dans la zone de liste l’info virtuelle (Etat dans notre exemple).
 Enfin, exécutez la « roue crantée » de la commande virtuelle, et dans l’onglet « Affichage », au paramètre widget/dashboard : sélectionnez le widget « Wlbx_Toggle » créé précédemment.
 
-### Création d’un scénario
+Création d’un scénario
+-----------------------
 Vous pouvez utiliser un scénario pour programme l’allumage ou l’extinction du wifi.
 
 A titre d’exemple, il est indiqué maintenant comment créer un scénario qui étendra automatique le wifi à 22H30 si celui-ci est encore allumé :

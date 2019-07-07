@@ -70,6 +70,7 @@ Complétez les paramètres :
 
 Dans la zone d’édition, insérez le code suivant :
 
+``` HTML
 <div class="wlbxX-#id# cmd tooltips cmd-widget #history# cursor" title="" data-type="action" data-subtype="other" data-cmd_id="#id#" data-cmd_uid="#uid#">
     <center>
         <span style="font-size: 3.5em;" class="action iconCmd#uid#" id="iconCmd#id#"></span>
@@ -89,7 +90,7 @@ Dans la zone d’édition, insérez le code suivant :
 	$('.cmd[data-cmd_id=#id#] .action').on('click', function () {jeedom.cmd.execute({id: '#id#'});});
 	</script>
 </div>
-
+```
 Puis sauvegardez.
 
 > Vous pouvez personaliser le widget en remplacant [<i class="icon *"></i>] par un lien vers l’image de votre choix.

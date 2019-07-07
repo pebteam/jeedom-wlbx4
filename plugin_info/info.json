@@ -1,0 +1,10 @@
+{
+	"id" : "wlbx4",
+	"name" : "Wlbx4",
+    "description" : "Plugin JEEDOM permettant d'allumer ou éteindre le wifi d'une livebox 4",
+	"licence" : "AGPL",
+	"author" : "PEBTEAM",
+	"require" : "2.0",
+    "version" : "1",
+	"category" : "communication"
+}

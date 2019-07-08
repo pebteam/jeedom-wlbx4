@@ -11,7 +11,7 @@ CONFIGURATION DES EQUIPEMENTS
 La configuration des équipements est accessible à partir du menu plugin : 
 Plugins / Communication / Wlbx4
 
-Pour créer un équipement, cliquez sur  ![](/BLs.png)__Ajouter__![](/BRs.png)  puis donnez lui un nom (Dans la suite du présent document, la référence au nom donné sera [Livebox]).     
+Pour créer un équipement, cliquez sur  ![](/BLs.png)*ajouter*![](/BRs.png)  puis donnez lui un nom (Dans la suite du présent document, la référence au nom donné sera [Livebox]).     
 Vous retrouvez alors toute la configuration de votre équipement.
 
 ONGLET Livebox
@@ -28,8 +28,9 @@ ONGLET Livebox
 
 ONGLET Commandes
 ----------------
-Affiche les actions ou informations disponible pour le plugin.
-Ces commandes sont générées automatiquement lors de la création de l’équipement. Il n’est pas possible de les supprimer ou d’en ajouter d’autre.
+Affiche les actions ou informations disponible pour le plugin.   
+Ces commandes sont générées automatiquement lors de la création de l’équipement.   
+Il n’est pas possible de les supprimer ou d’en ajouter d’autre.
 
 Cinq actions ou informations sont disponibles :
 - **State** (Information – nom interne : wstate) : Retourne l’état actuel du wifi (0 = éteint – 1 = allumé).
@@ -54,13 +55,13 @@ Il suffit alors de cliquer sur le bouton correspondant pour allumer ou éteindre
 
 Création d’un bouton unique (Au moyen d’un virtuel)
 --------------------------------------------------
-Il est possible d’afficher l’équipement sous la forme d’un unique bouton permettant d’allumer ou d’éteindre le wifi de la livebox et retournant en même temps son état.
+Il est possible d’afficher l’équipement sous la forme d’un unique bouton permettant d’allumer ou d’éteindre le wifi de la livebox et retournant en même temps son état.   
 Pour y parvenir, il convient d’abord de créer un widget puis de créer un virtuel :
 
 ### Création d’un widget :
 A partir du menu : 
 Plugins / Programmation / Widget
-Choisissez « Ajouter un widget ».
+Choisissez ![](/BLs.png)*Ajouter un widget*![](/BRs.png).
 
 Complétez les paramètres :
 - **Nom du widget** : Wlbx_Toggle

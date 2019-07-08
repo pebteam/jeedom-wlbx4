@@ -11,7 +11,7 @@ CONFIGURATION DES EQUIPEMENTS
 La configuration des équipements est accessible à partir du menu plugin : 
 Plugins / Communication / Wlbx4
 
-Pour créer un équipement, cliquez sur  ![Alt](/BLs.png)```Ajouter```![Alt](/BRs.png)  puis donnez lui un nom (Dans la suite du présent document, la référence au nom donné sera [Livebox]).     
+Pour créer un équipement, cliquez sur  ![](/BLs.png)**Ajouter**![](/BRs.png)  puis donnez lui un nom (Dans la suite du présent document, la référence au nom donné sera [Livebox]).     
 Vous retrouvez alors toute la configuration de votre équipement.
 
 ONGLET Livebox

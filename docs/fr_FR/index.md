@@ -56,11 +56,11 @@ Il suffit alors de cliquer sur le bouton correspondant pour allumer ou éteindre
 Création d’un bouton unique (Au moyen d’un virtuel)
 --------------------------------------------------
 Il est possible d’afficher l’équipement sous la forme d’un unique bouton permettant d’allumer ou d’éteindre le wifi de la livebox et retournant en même temps son état.   
-Pour y parvenir, il convient d’abord de créer un widget puis de créer un virtuel :
+Pour y parvenir, il convient d’abord de **créer un widget** puis de **créer un virtuel** :
 
 ### Création d’un widget :
 A partir du menu : 
-Plugins / Programmation / Widget
+Plugins / Programmation / Widget   
 Choisissez ![](/BLs.png)*Ajouter un widget*![](/BRs.png).
 
 Complétez les paramètres :
@@ -94,58 +94,58 @@ Dans la zone d’édition, insérez le code suivant :
 ```
 Puis sauvegardez.
 
-> Vous pouvez personaliser le widget en remplacant [<i class="icon *"></i>] par un lien vers l’image de votre choix.
+> Vous pouvez personaliser le widget en remplacant <i class="icon *"></i> par un lien vers l’image de votre choix.
 
 ### Création d’un virtuel : 
 A partir du menu : 
-Plugins / Programmation / Virtuel
-Choisissez « Ajouter» puis donnez un nom au nouveau virtuel.
+Plugins / Programmation / Virtuel  
+Choisissez ![](/BLs.png)*ajouter*![](/BRs.png) puis donnez un nom au nouveau virtuel.
 
-**Dans l’onglet équipement :**
+**Dans l’onglet équipement :**   
 Déterminez l’objet parent (Le nom du dashboard par exemple) puis sélectionnez « Activer » et « Visible ».
 
-**Dans l’onglet commandes :**
-Exécutez « Ajouter une info virtuelle ».
+**Dans l’onglet commandes :**   
+Exécutez ![](/BLs.png)*Ajouter une info virtuelle*![](/BRs.png).
 
 Complétez les paramètres : 
 - Nom : Etat
 - Sous-type : Binaire
-- Valeur : A côté de la zone de texte, exécutez « Recherche équipement » et indiquez la commande « Reverse » de l’équipement [Livebox] (Ou tout autre nom que vous aurez donné lors de la création initiale de l’équipement) de l’objet auquel l’équipement est rattaché.
-- Paramètres : Décochez afficher
-Exécutez « Ajouter une commande virtuelle ».
+- Valeur : A côté de la zone de texte, exécutez ![](/BLs.png)*Recherche équipement*![](/BRs.png) et indiquez la commande « Reverse » de l’équipement [Livebox] (Ou tout autre nom que vous aurez donné lors de la création initiale de l’équipement) de l’objet auquel l’équipement est rattaché.
+- Paramètres : Décochez afficher  
+Exécutez ![](/BLs.png)*Ajouter une commande virtuelle*![](/BRs.png).   
 Complétez les paramètres : 
 - Nom : Inverser
 - Sous-type : Défaut
 - valeur : 
-. A côté de la première zone de texte (Nom information), exécutez « Recherche équipement » et indiquez la commande « Reverse » de l’équipement [Livebox] (Ou tout autre nom que vous aurez donné lors de la création initiale de l’équipement) de l’objet auquel l’équipement est rattaché.
-. A côté de la deuxième zone de texte (Valeur), exécutez « Recherche équipement » et indiquez la commande « State » de l’équipement [Livebox] (Ou tout autre nom que vous aurez donné lors de la création initiale de l’équipement) de l’objet auquel l’équipement est rattaché.
+. A côté de la première zone de texte (Nom information), exécutez ![](/BLs.png)*Recherche équipement*![](/BRs.png) et indiquez la commande « Reverse » de l’équipement [Livebox] (Ou tout autre nom que vous aurez donné lors de la création initiale de l’équipement) de l’objet auquel l’équipement est rattaché.
+. A côté de la deuxième zone de texte (Valeur), exécutez ![](/BLs.png)*Recherche équipement*![](/BRs.png) et indiquez la commande « State » de l’équipement [Livebox] (Ou tout autre nom que vous aurez donné lors de la création initiale de l’équipement) de l’objet auquel l’équipement est rattaché.
 
-Puis sauvegardez.
+Puis sauvegardez.  
 
 En dessous du nom de la commande virtuelle (Inverser dans  notre exemple), sélectionnez dans la zone de liste l’info virtuelle (Etat dans notre exemple).
 Enfin, exécutez la « roue crantée » de la commande virtuelle, et dans l’onglet « Affichage », au paramètre widget/dashboard : sélectionnez le widget « Wlbx_Toggle » créé précédemment.
 
 Création d’un scénario
 -----------------------
-Vous pouvez utiliser un scénario pour programme l’allumage ou l’extinction du wifi.
+Vous pouvez utiliser un scénario pour programme l’allumage ou l’extinction du wifi.  
 
-A titre d’exemple, il est indiqué maintenant comment créer un scénario qui étendra automatique le wifi à 22H30 si celui-ci est encore allumé :
+A titre d’exemple, il est indiqué maintenant comment créer un scénario qui étendra automatique le wifi à 22H30 si celui-ci est encore allumé :  
 
 A partir du menu: 
-Outils / Scénarios
-Choisissez « Ajouter» puis donnez un nom au nouveau scénario.
+Outils / Scénarios  
+Choisissez ![](/BLs.png)*Ajouter*![](/BRs.png) puis donnez un nom au nouveau scénario.
 
 **Dans l’onglet général :**
 Dans la zone de liste du « mode de scénario », sélectionnez « Programmé ».
-Exécutez « +Programmation ».
+Exécutez ![](/BLs.png)*+Programmation*![](/BRs.png).   
 Dans la zone de texte venant de s’ajouter, cliquez sur le point d’interrogation. Un assistant s’ouvre.
 Complétez les paramètres : 
 - A exécuter : récurrent
 - Every : Day at 22 : 30
 
 **Dans l’onglet scénario :**
-Exécutez « +Ajouter bloc » et choisissez « Si/Alors/Sinon ».
-Dans le bloc venant de s’ajouter, exécutez « Ajouter » et sélectionnez « action ».
-Dans la première zone de texte : indiquez 1=1 ; Puis dans la deuxième zone de texte : exécutez « Sélectionner la commande » et indiquez la commande « Off » de l’équipement [Livebox] (Ou tout autre nom que vous aurez donné lors de la création initiale de l’équipement) de l’objet auquel l’équipement est rattaché.
+Exécutez ![](/BLs.png)*+Ajouter bloc*![](/BRs.png) et choisissez « Si/Alors/Sinon ».
+Dans le bloc venant de s’ajouter, exécutez ![](/BLs.png)*Ajouter*![](/BRs.png) et sélectionnez « action ».  
+Dans la première zone de texte : indiquez 1=1 ; Puis dans la deuxième zone de texte : exécutez ![](/BLs.png)*Sélectionner la commande*![](/BRs.png) et indiquez la commande « Off » de l’équipement [Livebox] (Ou tout autre nom que vous aurez donné lors de la création initiale de l’équipement) de l’objet auquel l’équipement est rattaché.  
 
 Puis sauvegardez.

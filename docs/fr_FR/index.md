@@ -37,7 +37,7 @@ Cinq actions ou informations sont disponibles :
 - **On** (Action – nom interne : won) : Allumer le wifi.
 - **Off** (Action – nom interne : woff) : Eteindre le wifi.
 - **Reverse** (Action – nom interne : wswitch) : Inverser (allumer/éteindre) le wifi.
-- **Rafraichir** (Action – nom interne : wrefresh) : Vérifier l’état actuel du wifi.
+- **Refresh** (Action – nom interne : wrefresh) : Vérifier l’état actuel du wifi.
 
 Les paramètres suivants peuvent être modifiés par l’utilisateur :
 - **Nom** : Le nom de la commande qui apparaitra dans le widget sur le dashbord.
@@ -50,7 +50,7 @@ UTILISATION
 
 Utilisation de base
 -------------------
-Une fois l’équipement créé et configuré, celui-ci est directement accessible (sous réserve que l’option visible ait été choisie !) sur le dashboard choisi comme parent.
+Une fois l’équipement créé et configuré, celui-ci est directement accessible (sous réserve que l’option visible ait été sélectionnée !) sur le dashboard choisi comme parent.   
 Il suffit alors de cliquer sur le bouton correspondant pour allumer ou éteindre le wifi de la livebox.
 
 Création d’un bouton unique (Au moyen d’un virtuel)
@@ -61,7 +61,8 @@ Pour y parvenir, il convient d’abord de **créer un widget** puis de **créer 
 ### Création d’un widget :
 A partir du menu : 
 Plugins / Programmation / Widget   
-Choisissez `|Ajouter un widget|`.
+
+Choisissez `|Ajouter un widget|`
 
 Complétez les paramètres :
 - **Nom du widget** : Wlbx_Toggle
@@ -99,7 +100,8 @@ Puis sauvegardez.
 ### Création d’un virtuel : 
 A partir du menu : 
 Plugins / Programmation / Virtuel  
-Choisissez `|Ajouter|` puis donnez un nom au nouveau virtuel.
+
+Choisissez `|Ajouter|` puis donnez un nom au nouveau virtuel
 
 **Dans l’onglet équipement :**   
 Déterminez l’objet parent (Le nom du dashboard par exemple) puis sélectionnez « Activer » et « Visible ».

@@ -422,7 +422,7 @@ class wlbx4Cmd extends cmd {
 		
 		//Temps de pause (Il semble préférable d'effectuer une pause après une requête pour Allumer ou
 		//Eteindre le wifi, car si l'on effectue en suivant une requête pour connaitre l'état du wifi,
-		//il semble que la LIVEBOX retourne l'état du wifi avant d'avoir pu exécuter la fonction ALLUMER
+		//il semble que la LIVEBOX retourne l'état du wifi avant d'avoir pu exécuter la fonction Allumze
 		//ou Eteindre)
 		$SleepTime=2;
 		
